@@ -1,0 +1,18 @@
+packages:
+  - apps/*
+
+ignoredBuiltDependencies:
+  - esbuild
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - bufferutil
+  - core-js
+  - isolated-vm
+  - vue-demi
+  - zlib-sync
+
+overrides:
+  dompurify: '^3.4.11'
+  esbuild: '^0.28.1'
+  vite: '^7.3.5'

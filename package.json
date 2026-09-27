@@ -1,0 +1,23 @@
+{
+  "name": "lacunabot",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:core": "pnpm -F @lacunabot/core run build",
+    "build:web": "pnpm -F @lacunabot/web run build",
+    "start": "pnpm build:core && pnpm -F @lacunabot/core --parallel run \"/^(start|start:api|start:bot)$/\"",
+    "start:web": "pnpm -F @lacunabot/web run dev",
+    "format": "prettier . --write --config .prettierrc",
+    "format:check": "prettier . --check --config .prettierrc",
+    "type-check": "pnpm -F @lacunabot/core run type-check"
+  },
+  "packageManager": "pnpm@10.34.3",
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  }
+}
